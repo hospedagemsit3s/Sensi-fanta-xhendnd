@@ -1,0 +1,99 @@
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+/* Custom Styles to supplement Tailwind */
+body {
+    background-color: #000000;
+    -webkit-font-smoothing: antialiased;
+    color: #fafafa;
+}
+
+/* Background Gradients */
+.bg-main-gradient {
+    background: linear-gradient(to bottom right, #000000, #18181b, #000000);
+}
+
+.bg-radial-glow {
+    background: radial-gradient(ellipse at top, rgba(255, 107, 0, 0.1), transparent 50%);
+}
+
+.bg-clip-text {
+    -webkit-background-clip: text;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+.animate-pulse {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.3s ease-out forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+}
+
+/* Page Transitions */
+#main-content {
+    transition: opacity 0.3s ease;
+}
+
+/* Specific Component Styles */
+.chip-active {
+    background-color: rgba(249, 115, 22, 0.1) !important;
+    border-color: #f97316 !important;
+    color: #f97316 !important;
+}
+
+.style-btn-active {
+    background-color: #f97316 !important;
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+/* Input Focus */
+.input-focus:focus {
+    border-color: #f97316 !important;
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2) !important;
+}
+
+/* Lucide Icon sizing */
+.lucide {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Card Refinement */
+.card-bg {
+    background: linear-gradient(to bottom right, #18181b, #000000);
+}
+
+.card-border {
+    border-color: #27272a;
+}
+
+.card-hover:hover {
+    border-color: rgba(249, 115, 22, 0.5);
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.15);
+}
